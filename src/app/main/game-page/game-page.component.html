@@ -1,0 +1,23 @@
+<div>
+  <div class="uc-maxscore-container">Maximum Score: {{ maxScore }}</div>
+  <table>
+    <div>
+      <div class="uc-theader">
+        <div class="uc-table-cell">Player</div>
+        <div class="uc-table-cell">Score</div>
+        <div class="uc-table-cell">Current</div>
+      </div>
+    </div>
+    <div class="uc-tbody">
+      <div *ngFor="let player of players">
+        <uc-player-score-item
+          [player]="player"
+          [scoreControl]="$any(getPlayerControl(player))"
+        ></uc-player-score-item>
+      </div>
+    </div>
+  </table>
+  <div class="uc-button-container" *ngIf="!this.isFinished">
+    <div class="uc-default-button" (click)="saveScores()">Save</div>
+  </div>
+</div>

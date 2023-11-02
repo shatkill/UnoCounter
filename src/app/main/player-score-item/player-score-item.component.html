@@ -1,0 +1,11 @@
+<div class="uc-table-row">
+  <div class="uc-table-cell">{{ player?.name }}</div>
+  <div class="uc-table-cell">{{ player?.score }}</div>
+  <div class="uc-table-cell">
+    <input
+      type="number"
+      class="uc-score-counter"
+      [formControl]="scoreControl"
+    />
+  </div>
+</div>

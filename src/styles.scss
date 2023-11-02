@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(215, 215, 215);
+    background-color: #121212;
+}
+
+.uc-default-button {
+    border-radius: 8px;
+    padding: 0.5rem;
+    width: fit-content;
+    background-color: #f8da27;
+    color: black;
+    cursor: pointer;
+}
+
+.uc-accent-button {
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: fit-content;
+  background-color: #ed1c24;
+  color: black;
+  cursor: pointer;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  border-radius: 8px;
+  outline-style: none;
+  border: 1px solid #f8da27;
+}
