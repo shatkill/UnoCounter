@@ -1,0 +1,61 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./src/styles.scss?ngGlobalStyle ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(215, 215, 215);
+}
+
+.uc-default-button {
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: #ecd407;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uc-accent-button {
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: #d72600;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 500px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #121212;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  outline-style: none;
+  border: none;
+  border-bottom: 1px solid #ecd407;
+  background-color: #121212;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map*/
