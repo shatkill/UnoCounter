@@ -5,7 +5,7 @@ import { Player } from './models/Player';
   providedIn: 'root',
 })
 export class DataSaveService {
-  public set players(players: Player[] | null) {
+  public set players(players: string[] | null) {
     localStorage.setItem('players', JSON.stringify(players));
   }
 
@@ -13,9 +13,9 @@ export class DataSaveService {
     let localStoragePlayers = localStorage.getItem('players');
 
     if (localStoragePlayers !== null) {
-      return JSON.parse(localStoragePlayers) as Player[];
+      return JSON.parse(localStoragePlayers) as string[];
     }
-    return null;
+    return [];
   }
 
   public set maxScore(maxScore: number) {

@@ -1,23 +1,28 @@
-<div>
-  <div class="uc-maxscore-container">Maximum Score: {{ maxScore }}</div>
-  <table>
-    <div>
-      <div class="uc-theader">
-        <div class="uc-table-cell">Player</div>
-        <div class="uc-table-cell">Score</div>
-        <div class="uc-table-cell">Current</div>
-      </div>
-    </div>
-    <div class="uc-tbody">
-      <div *ngFor="let player of players">
-        <uc-player-score-item
-          [player]="player"
-          [scoreControl]="$any(getPlayerControl(player))"
-        ></uc-player-score-item>
-      </div>
-    </div>
-  </table>
-  <div class="uc-button-container" *ngIf="!this.isFinished">
-    <div class="uc-default-button" (click)="saveScores()">Save</div>
-  </div>
+<table>
+  <thead>
+    <tr class="uc-table-header-row">
+      <th *ngFor="let player of players">
+        {{ shufflePlayer === player ? "• " + player : player }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of [].constructor(rounds); let round = index">
+      <td *ngFor="let player of players">
+        {{ scores[player][round] }}
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let player of players">
+        <input
+          type="number"
+          class="uc-score-counter"
+          [formControl]="$any(getPlayerControl(player))"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="uc-button-container" *ngIf="!this.isFinished">
+  <div class="uc-default-button" (click)="addScores()">Save</div>
 </div>

@@ -1,24 +1,81 @@
+@import "../../../stylings.scss";
+
 .uc-table-cell {
-    width: 100px;
-    text-align: left;
-    font-size: large;
-    padding: 0.5rem;
+  width: 100px;
+  text-align: left;
+  font-size: large;
+  padding: 0.5rem;
 }
 
 .uc-maxscore-container {
-    font-size: large;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .uc-button-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
 }
 
 .uc-theader {
-    display: flex;
-    font-weight: bold;
+  display: flex;
+  font-weight: bold;
+}
+
+// ********************
+/* scoreboard.component.scss */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th,
+  td {
+    border: 1px solid $base-yellow;
+    padding: 8px;
+    text-align: end;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    input {
+      width: 40px;
+      font-weight: bold;
+      text-align: end;
+    }
+  }
+
+  .uc-table-header-row {
+    th {
+      color: black;
+    }
+
+    :nth-child(n) {
+      background-color: $base-red;
+    }
+    :nth-child(2n) {
+      background-color: $base-yellow;
+    }
+    :nth-child(3n) {
+      background-color: $base-green;
+    }
+    :nth-child(4n) {
+      background-color: $base-blue;
+    }
+  }
+}
+
+div {
+  margin-top: 20px;
+
+  label {
+    margin-right: 10px;
+  }
+
+  select,
+  input,
+  button {
+    margin-right: 10px;
+  }
 }

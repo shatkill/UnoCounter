@@ -14,10 +14,15 @@ import { Player } from 'src/app/shared/models/Player';
   styleUrls: ['./game-page.component.scss'],
 })
 export class GamePageComponent {
-  public players!: Player[] | null;
+  public players!: string[] | null;
+
+  public shufflePlayer: string | undefined;
   public maxScore: number;
   public isFinished = false;
   public halvePointsActivated = false;
+
+  public scores: { [player: string]: number[] } = {};
+  public rounds;
 
   public formGroup!: ReturnType<typeof this.createFormGroup>;
 
@@ -27,40 +32,66 @@ export class GamePageComponent {
     this.halvePointsActivated = this.dataSaveService.halvePointsActivated;
 
     this.formGroup = this.createFormGroup();
+
+    this.rounds = 1;
+    this.changeShufflePlayerTurn();
+
+    this.players?.forEach((player) => {
+      if (!this.scores[player]) {
+        this.scores[player] = [0];
+      }
+    });
   }
 
-  public saveScores() {
+  public addScores() {
     this.players?.forEach((player) => {
-      player.score += this.getPlayerControl(player).value;
+      this.scores[player].push(
+        this.getCurrentScoreOfPlayer(player) +
+          this.getPlayerControl(player).value
+      );
 
-      if (this.halvePointsActivated && player.score % 100 === 0) {
-        player.score /= 2;
+      if (
+        this.halvePointsActivated &&
+        this.getCurrentScoreOfPlayer(player) % 100 === 0
+      ) {
+        this.scores[player][this.scores[player].length - 1] /= 2;
       }
 
       this.getPlayerControl(player).setValue(null);
     });
 
-    this.dataSaveService.players = this.players;
+    this.rounds++;
     this.determineLoser();
+    this.changeShufflePlayerTurn();
   }
 
   public determineLoser() {
     this.players?.forEach((player) => {
-      if (player.score >= this.maxScore) {
+      if (this.getCurrentScoreOfPlayer(player) >= this.maxScore) {
         this.isFinished = true;
       }
     });
   }
 
-  public getPlayerControl(player: Player) {
-    return this.formGroup.controls[player.name];
+  public getCurrentScoreOfPlayer(player: string) {
+    return this.scores[player][this.scores[player].length - 1];
+  }
+
+  public getPlayerControl(player: string) {
+    return this.formGroup.controls[player];
+  }
+
+  public changeShufflePlayerTurn() {
+    this.shufflePlayer = this.players
+      ? this.players[(this.rounds - 1) % this.players.length]
+      : '';
   }
 
   public createFormGroup() {
     const group: any = {};
 
     this.players?.forEach((player) => {
-      group[player.name] = new FormControl<number | null>(null);
+      group[player] = new FormControl<number | null>(null);
     });
     return new FormGroup(group);
   }

@@ -1,21 +1,39 @@
-<div class="uc-main-container">
-  <div>Welcome to Uno Counter. Please select your players.</div>
+<div class="uc-rules">
+  <h4>Rules</h4>
 
-  <form class="uc-add-player-form">
-    <label>Halve points at full hundreds?</label>
-    <input type="checkbox" [formControl]="halveControl" />
+  <form class="uc-rules-form">
+    <div>
+      <label>Halve points at full hundreds?</label>
+      <input type="checkbox" [formControl]="halveControl" />
+    </div>
+    <div>
+      <input
+        type="number"
+        [formControl]="scoreControl"
+        placeholder="Max. Score"
+      />
+      <label>Max Score</label>
+    </div>
   </form>
-  <form class="uc-add-player-form">
-    <label>Max Score</label>
-    <input type="number" [formControl]="scoreControl" />
-  </form>
-  <div *ngFor="let player of selectedPlayers">
-    {{ player.name }}
-  </div>
-  <form class="uc-add-player-form">
-    <input type="text" placeholder="Name" [formControl]="addPlayerControl" />
-    <div class="uc-default-button" (click)="addPlayer()">Add player</div>
-  </form>
-
-  <div class="uc-accent-button" (click)="startGame()">Start Game</div>
 </div>
+
+<div class="uc-players-table">
+  <h4>Players: {{ selectedPlayers.length }}</h4>
+
+  <div class="uc-player" *ngIf="selectedPlayers.length == 0">
+    Add players below
+  </div>
+
+  <div class="uc-players">
+    <div class="uc-player" *ngFor="let player of selectedPlayers">
+      {{ player }}
+    </div>
+  </div>
+</div>
+
+<form class="uc-add-player-form">
+  <input type="text" placeholder="Name" [formControl]="addPlayerControl" />
+  <div class="uc-default-button" (click)="addPlayer()">Add player</div>
+</form>
+
+<div class="uc-accent-button" (click)="startGame()">Start Game</div>
