@@ -7,10 +7,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { GamePageComponent } from './game-page/game-page.component';
 import { PlayerScoreItemComponent } from './player-score-item/player-score-item.component';
+import { StatisticsDialogComponent } from './game-page/statistics-dialog/statistics-dialog.component';
 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,17 @@ import { PlayerScoreItemComponent } from './player-score-item/player-score-item.
     MainLandingComponent,
     MainHeaderComponent,
     GamePageComponent,
-    PlayerScoreItemComponent
+    PlayerScoreItemComponent,
+    StatisticsDialogComponent,
   ],
   imports: [
-    CommonModule, BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule
-  ], 
-  exports: [MainFrameComponent, MainLandingComponent, MainHeaderComponent]
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
+  ],
+  exports: [MainFrameComponent, MainLandingComponent, MainHeaderComponent],
 })
-export class MainModule { }
+export class MainModule {}

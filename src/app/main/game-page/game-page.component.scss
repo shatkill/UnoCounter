@@ -7,14 +7,26 @@
   padding: 0.5rem;
 }
 
-.uc-maxscore-container {
-  font-size: large;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+.uc-score-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.uc-button-container {
+.uc-score {
+  font-weight: bold;
+}
+
+.uc-info-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+
+.uc-edit-button {
+  margin-left: 1rem;
 }
 
 .uc-theader {
@@ -22,8 +34,15 @@
   font-weight: bold;
 }
 
-// ********************
-/* scoreboard.component.scss */
+.uc-winner-cell {
+  color: $base-green;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.uc-current-shuffler-cell {
+  text-decoration: underline;
+}
 
 table {
   width: 100%;
@@ -67,8 +86,6 @@ table {
 }
 
 div {
-  margin-top: 20px;
-
   label {
     margin-right: 10px;
   }

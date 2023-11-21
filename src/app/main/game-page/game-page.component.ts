@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  UntypedFormControl,
-  UntypedFormGroup,
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { DataSaveService } from 'src/app/shared/data-save.service';
-import { Player } from 'src/app/shared/models/Player';
+import { StatisticsDialogComponent } from './statistics-dialog/statistics-dialog.component';
+
+export interface Score {
+  scoreCurrentRound: number;
+  sumScore: number;
+  won: boolean;
+}
 
 @Component({
   selector: 'uc-game-page',
@@ -21,12 +23,15 @@ export class GamePageComponent {
   public isFinished = false;
   public halvePointsActivated = false;
 
-  public scores: { [player: string]: number[] } = {};
+  public scores: { [player: string]: Score[] } = {};
   public rounds;
 
   public formGroup!: ReturnType<typeof this.createFormGroup>;
 
-  constructor(private dataSaveService: DataSaveService) {
+  constructor(
+    private dataSaveService: DataSaveService,
+    private dialog: MatDialog
+  ) {
     this.players = this.dataSaveService.players;
     this.maxScore = this.dataSaveService.maxScore;
     this.halvePointsActivated = this.dataSaveService.halvePointsActivated;
@@ -38,23 +43,32 @@ export class GamePageComponent {
 
     this.players?.forEach((player) => {
       if (!this.scores[player]) {
-        this.scores[player] = [0];
+        this.scores[player] = [
+          { scoreCurrentRound: 0, sumScore: 0, won: false },
+        ];
       }
     });
   }
 
   public addScores() {
+    if (!this.thereIsOneWinner()) {
+      return;
+    }
+
     this.players?.forEach((player) => {
-      this.scores[player].push(
-        this.getCurrentScoreOfPlayer(player) +
-          this.getPlayerControl(player).value
-      );
+      this.scores[player].push({
+        scoreCurrentRound: this.getPlayerControl(player).value,
+        sumScore:
+          this.getPlayerControl(player).value +
+          this.getCurrentScoreOfPlayer(player),
+        won: this.getPlayerControl(player).value === null,
+      });
 
       if (
         this.halvePointsActivated &&
         this.getCurrentScoreOfPlayer(player) % 100 === 0
       ) {
-        this.scores[player][this.scores[player].length - 1] /= 2;
+        this.scores[player][this.scores[player].length - 1].sumScore /= 2;
       }
 
       this.getPlayerControl(player).setValue(null);
@@ -63,6 +77,8 @@ export class GamePageComponent {
     this.rounds++;
     this.determineLoser();
     this.changeShufflePlayerTurn();
+
+    console.log(this.scores);
   }
 
   public determineLoser() {
@@ -74,7 +90,7 @@ export class GamePageComponent {
   }
 
   public getCurrentScoreOfPlayer(player: string) {
-    return this.scores[player][this.scores[player].length - 1];
+    return this.scores[player][this.scores[player].length - 1].sumScore;
   }
 
   public getPlayerControl(player: string) {
@@ -94,5 +110,27 @@ export class GamePageComponent {
       group[player] = new FormControl<number | null>(null);
     });
     return new FormGroup(group);
+  }
+
+  public thereIsOneWinner() {
+    let winners = 0;
+    this.players?.forEach((player) => {
+      if (this.getPlayerControl(player).value === null) winners++;
+    });
+
+    return winners === 1;
+  }
+
+  public editMaxScore() {}
+
+  public openStatistics(): void {
+    const dialogRef = this.dialog.open(StatisticsDialogComponent, {
+      data: { players: this.players, scores: this.scores, rounds: this.rounds },
+      maxWidth: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }

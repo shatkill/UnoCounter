@@ -1,0 +1,61 @@
+@import "../../../../stylings.scss";
+
+.uc-dialog-container {
+  padding: 1rem;
+  background-color: $main-background;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid $base-yellow;
+    padding: 8px;
+    text-align: end;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    input {
+      width: 40px;
+      font-weight: bold;
+      text-align: end;
+    }
+  }
+
+  .uc-table-header-row {
+    th {
+      color: black;
+    }
+
+    :nth-child(n) {
+      background-color: $base-blue;
+    }
+    :nth-child(2n) {
+      background-color: $base-red;
+    }
+    :nth-child(3n) {
+      background-color: $base-yellow;
+    }
+    :nth-child(4n) {
+      background-color: $base-green;
+    }
+    :first-child {
+      background-color: #111111;
+    }
+  }
+}
+
+div {
+  label {
+    margin-right: 10px;
+  }
+
+  select,
+  input,
+  button {
+    margin-right: 10px;
+  }
+}

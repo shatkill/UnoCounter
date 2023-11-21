@@ -1,15 +1,33 @@
+<div class="uc-info-container">
+  <div class="uc-score-info">
+    <div class="uc-score">Max Score: {{ maxScore }}</div>
+    <div class="uc-edit-button" (click)="editMaxScore()">
+      <mat-icon>edit</mat-icon>
+    </div>
+  </div>
+  <div class="uc-info-button" (click)="openStatistics()">
+    <mat-icon>info</mat-icon>
+  </div>
+</div>
+
 <table>
   <thead>
     <tr class="uc-table-header-row">
-      <th *ngFor="let player of players">
-        {{ shufflePlayer === player ? "• " + player : player }}
+      <th
+        *ngFor="let player of players"
+        [ngClass]="{ 'uc-current-shuffler-cell': shufflePlayer === player }"
+      >
+        {{ player }}
       </th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let e of [].constructor(rounds); let round = index">
-      <td *ngFor="let player of players">
-        {{ scores[player][round] }}
+      <td
+        *ngFor="let player of players"
+        [ngClass]="{ 'uc-winner-cell': scores[player][round].won }"
+      >
+        {{ scores[player][round].sumScore }}
       </td>
     </tr>
     <tr>
@@ -23,6 +41,6 @@
     </tr>
   </tbody>
 </table>
-<div class="uc-button-container" *ngIf="!this.isFinished">
-  <div class="uc-default-button" (click)="addScores()">Save</div>
+<div *ngIf="!this.isFinished" class="uc-default-button" (click)="addScores()">
+  Save
 </div>

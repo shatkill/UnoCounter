@@ -1,0 +1,19 @@
+<div class="uc-dialog-container">
+  <h4>Statistics</h4>
+  <table>
+    <thead>
+      <tr class="uc-table-header-row">
+        <th></th>
+        <th *ngFor="let player of data.players">{{ player }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let statisticType of statisticTypes">
+        <td>{{ statisticType.id.name }}</td>
+        <td *ngFor="let player of data.players">
+          {{ statisticType.calcFunction(player) }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
