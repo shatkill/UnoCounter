@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Player } from './models/Player';
+import { Score } from '../main/game-page/game-page.component';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,7 @@ export class DataSaveService {
     localStorage.setItem('players', JSON.stringify(players));
   }
 
-  public get players() {
+  public get players(): string[] | null {
     let localStoragePlayers = localStorage.getItem('players');
 
     if (localStoragePlayers !== null) {
@@ -45,6 +45,21 @@ export class DataSaveService {
       return halvePointsActivated === 'true';
     }
     return false;
+  }
+
+  public set scores(scores: { [player: string]: Score[] }) {
+    if (scores == null) return;
+
+    localStorage.setItem('scores', JSON.stringify(scores));
+  }
+
+  public get scores(): { [player: string]: Score[] } {
+    let scores = localStorage.getItem('scores');
+
+    if (scores != null) {
+      return JSON.parse(scores) as { [player: string]: Score[] };
+    }
+    return {};
   }
 
   constructor() {}

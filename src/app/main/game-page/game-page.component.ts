@@ -24,7 +24,6 @@ export class GamePageComponent {
   public halvePointsActivated = false;
 
   public scores: { [player: string]: Score[] } = {};
-  public rounds;
 
   public formGroup!: ReturnType<typeof this.createFormGroup>;
 
@@ -35,19 +34,11 @@ export class GamePageComponent {
     this.players = this.dataSaveService.players;
     this.maxScore = this.dataSaveService.maxScore;
     this.halvePointsActivated = this.dataSaveService.halvePointsActivated;
+    this.scores = this.dataSaveService.scores;
 
     this.formGroup = this.createFormGroup();
 
-    this.rounds = 1;
     this.changeShufflePlayerTurn();
-
-    this.players?.forEach((player) => {
-      if (!this.scores[player]) {
-        this.scores[player] = [
-          { scoreCurrentRound: 0, sumScore: 0, won: false },
-        ];
-      }
-    });
   }
 
   public addScores() {
@@ -74,11 +65,9 @@ export class GamePageComponent {
       this.getPlayerControl(player).setValue(null);
     });
 
-    this.rounds++;
+    this.dataSaveService.scores = this.scores;
     this.determineLoser();
     this.changeShufflePlayerTurn();
-
-    console.log(this.scores);
   }
 
   public determineLoser() {
@@ -99,7 +88,7 @@ export class GamePageComponent {
 
   public changeShufflePlayerTurn() {
     this.shufflePlayer = this.players
-      ? this.players[(this.rounds - 1) % this.players.length]
+      ? this.players[(this.currentRound - 1) % this.players.length]
       : '';
   }
 
@@ -125,12 +114,21 @@ export class GamePageComponent {
 
   public openStatistics(): void {
     const dialogRef = this.dialog.open(StatisticsDialogComponent, {
-      data: { players: this.players, scores: this.scores, rounds: this.rounds },
+      data: {
+        players: this.players,
+        scores: this.scores,
+        rounds: this.currentRound,
+      },
       maxWidth: '500px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
     });
+  }
+
+  public get currentRound() {
+    if (this.scores === null || this.players === null) return 0;
+    return this.scores[this.players[0]].length;
   }
 }

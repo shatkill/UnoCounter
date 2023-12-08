@@ -3,6 +3,7 @@ import { FormControl, UntypedFormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataSaveService } from 'src/app/shared/data-save.service';
 import { Player } from 'src/app/shared/models/Player';
+import { Score } from '../game-page/game-page.component';
 
 @Component({
   selector: 'uc-main-landing',
@@ -45,6 +46,33 @@ export class MainLandingComponent implements OnInit {
     this.dataSaveService.halvePointsActivated =
       this.halveControl.value ?? false;
 
+    this.dataSaveService.scores = this.createScores();
+
     this.appRouter.navigate(['/game']);
+  }
+
+  public createScores() {
+    let scores: { [player: string]: Score[] } = {};
+
+    this.selectedPlayers?.forEach((player) => {
+      if (!scores[player]) {
+        scores[player] = [{ scoreCurrentRound: 0, sumScore: 0, won: false }];
+      }
+    });
+
+    return scores;
+  }
+
+  public resumeGame() {
+    this.appRouter.navigate(['/game']);
+  }
+
+  public get recentGameExists() {
+    if (
+      this.dataSaveService.players &&
+      this.dataSaveService.players.length > 0
+    ) {
+      return true;
+    } else return false;
   }
 }

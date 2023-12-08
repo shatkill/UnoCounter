@@ -22,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let e of [].constructor(rounds); let round = index">
+    <tr *ngFor="let e of [].constructor(currentRound); let round = index">
       <td
         *ngFor="let player of players"
         [ngClass]="{ 'uc-winner-cell': scores[player][round].won }"

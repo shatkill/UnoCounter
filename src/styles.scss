@@ -25,6 +25,15 @@
   cursor: pointer;
 }
 
+.uc-accent-green-button {
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: $base-green;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
 .uc-info-button {
   border-radius: 8px;
   background-color: $base-green;
@@ -59,6 +68,10 @@
   mat-icon {
     overflow: unset;
   }
+}
+
+.uc-space-bottom {
+  margin-bottom: 1rem;
 }
 
 html,
