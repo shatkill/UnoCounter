@@ -131,4 +131,12 @@ export class GamePageComponent {
     if (this.scores === null || this.players === null) return 0;
     return this.scores[this.players[0]].length;
   }
+
+  public undoLastScores() {
+    if (this.currentRound < 2) return;
+
+    this.players?.forEach((player) => {
+      this.scores[player].pop();
+    });
+  }
 }

@@ -32,7 +32,12 @@
 </div>
 
 <form class="uc-add-player-form uc-space-bottom">
-  <input type="text" placeholder="Name" [formControl]="addPlayerControl" />
+  <input
+    #addPlayerInput
+    type="text"
+    placeholder="Name"
+    [formControl]="addPlayerControl"
+  />
   <div class="uc-default-button" (click)="addPlayer()">Add player</div>
 </form>
 

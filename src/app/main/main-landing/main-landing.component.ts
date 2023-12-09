@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, UntypedFormControl } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataSaveService } from 'src/app/shared/data-save.service';
-import { Player } from 'src/app/shared/models/Player';
 import { Score } from '../game-page/game-page.component';
 
 @Component({
@@ -15,7 +14,9 @@ export class MainLandingComponent implements OnInit {
 
   public addPlayerControl = new FormControl<string>('');
   public scoreControl = new FormControl<number>(400);
-  public halveControl = new FormControl<boolean>(false);
+  public halveControl = new FormControl<boolean>(true);
+
+  @ViewChild('addPlayerInput') addPlayerInput: ElementRef | undefined;
 
   constructor(
     private dataSaveService: DataSaveService,
@@ -34,6 +35,8 @@ export class MainLandingComponent implements OnInit {
 
     this.selectedPlayers.push(this.addPlayerControl.value);
     this.addPlayerControl.reset();
+
+    this.addPlayerInput?.nativeElement.focus();
   }
 
   public startGame() {
