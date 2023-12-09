@@ -136,7 +136,7 @@ export class GamePageComponent {
     if (this.currentRound < 2) return;
 
     this.players?.forEach((player) => {
-      this.scores[player].pop();
+      this.getPlayerControl(player).setValue(this.scores[player].pop()?.scoreCurrentRound);
     });
   }
 }
