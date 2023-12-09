@@ -327,7 +327,7 @@ class GamePageComponent {
   undoLastScores() {
     if (this.currentRound < 2) return;
     this.players?.forEach(player => {
-      this.scores[player].pop();
+      this.getPlayerControl(player).setValue(this.scores[player].pop()?.scoreCurrentRound);
     });
   }
   static #_ = this.ɵfac = function GamePageComponent_Factory(t) {
