@@ -168,18 +168,18 @@ const _c0 = function (a0) {
     "uc-current-shuffler-cell": a0
   };
 };
-function GamePageComponent_th_16_Template(rf, ctx) {
+function GamePageComponent_div_15_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "th", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
     const player_r4 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, ctx_r0.shufflePlayer === player_r4));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](3, _c0, ctx_r0.shufflePlayer === player_r4));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", player_r4, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", player_r4.slice(0, 1), "", player_r4.slice(-1), " ");
   }
 }
 const _c1 = function (a0) {
@@ -187,9 +187,9 @@ const _c1 = function (a0) {
     "uc-winner-cell": a0
   };
 };
-function GamePageComponent_tr_18_td_1_Template(rf, ctx) {
+function GamePageComponent_div_18_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "td", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -202,10 +202,10 @@ function GamePageComponent_tr_18_td_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r7.scores[player_r8][round_r6].sumScore, " ");
   }
 }
-function GamePageComponent_tr_18_Template(rf, ctx) {
+function GamePageComponent_div_18_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GamePageComponent_tr_18_td_1_Template, 2, 4, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GamePageComponent_div_18_div_1_Template, 2, 4, "div", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -214,10 +214,10 @@ function GamePageComponent_tr_18_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r1.players);
   }
 }
-function GamePageComponent_td_20_Template(rf, ctx) {
+function GamePageComponent_div_20_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
@@ -230,7 +230,7 @@ function GamePageComponent_td_20_Template(rf, ctx) {
 function GamePageComponent_div_21_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_div_21_Template_div_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r12);
       const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
@@ -338,7 +338,7 @@ class GamePageComponent {
     selectors: [["uc-game-page"]],
     decls: 22,
     vars: 6,
-    consts: [[1, "uc-info-container"], [1, "uc-score-info"], [1, "uc-score"], [1, "uc-edit-button", 3, "click"], [1, "uc-info-button", 3, "click"], [1, "uc-table-header-row"], [3, "ngClass", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["class", "uc-default-button", 3, "click", 4, "ngIf"], [3, "ngClass"], ["type", "number", 1, "uc-score-counter", 3, "formControl"], [1, "uc-default-button", 3, "click"]],
+    consts: [[1, "uc-info-container"], [1, "uc-score-info"], [1, "uc-score"], [1, "uc-edit-button", 3, "click"], [1, "uc-info-button", 3, "click"], [1, "uc-table", "uc-space-bottom"], [1, "uc-table-row", "uc-table-row-players"], ["class", "uc-table-cell uc-table-cell-player", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-seperator"], [1, "uc-scoreboard"], ["class", "uc-table-row", 4, "ngFor", "ngForOf"], [1, "uc-table-row"], ["class", "uc-table-cell", 4, "ngFor", "ngForOf"], ["class", "uc-default-button", 3, "click", 4, "ngIf"], [1, "uc-table-cell", "uc-table-cell-player", 3, "ngClass"], ["class", "uc-table-cell", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-table-cell", 3, "ngClass"], [1, "uc-table-cell"], ["type", "number", 3, "formControl"], [1, "uc-default-button", 3, "click"]],
     template: function GamePageComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2);
@@ -365,22 +365,23 @@ class GamePageComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "mat-icon");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "info");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "table")(14, "thead")(15, "tr", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](16, GamePageComponent_th_16_Template, 2, 4, "th", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "tbody");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](18, GamePageComponent_tr_18_Template, 2, 1, "tr", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "tr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](20, GamePageComponent_td_20_Template, 2, 1, "td", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 5)(14, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](15, GamePageComponent_div_15_Template, 2, 5, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](16, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](18, GamePageComponent_div_18_Template, 2, 1, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](20, GamePageComponent_div_20_Template, 2, 1, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](21, GamePageComponent_div_21_Template, 2, 0, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](21, GamePageComponent_div_21_Template, 2, 0, "div", 13);
       }
       if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("Max Score: ", ctx.maxScore, "");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.players);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](5, _c2).constructor(ctx.currentRound));
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.players);
@@ -389,7 +390,7 @@ class GamePageComponent {
       }
     },
     dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlDirective, _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__.MatIcon],
-    styles: [".uc-table-cell[_ngcontent-%COMP%] {\n  width: 100px;\n  text-align: left;\n  font-size: large;\n  padding: 0.5rem;\n}\n\n.uc-score-info[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.uc-score[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.uc-info-container[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 0;\n}\n\n.uc-edit-button[_ngcontent-%COMP%] {\n  margin-left: 1rem;\n}\n\n.uc-theader[_ngcontent-%COMP%] {\n  display: flex;\n  font-weight: bold;\n}\n\n.uc-winner-cell[_ngcontent-%COMP%] {\n  color: #379711;\n  font-weight: bold;\n  text-decoration: underline;\n}\n\n.uc-current-shuffler-cell[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n  border-collapse: collapse;\n  margin-bottom: 20px;\n}\ntable[_ngcontent-%COMP%]   th[_ngcontent-%COMP%], table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border: 1px solid #ecd407;\n  padding: 8px;\n  text-align: end;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\ntable[_ngcontent-%COMP%]   th[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  width: 40px;\n  font-weight: bold;\n  text-align: end;\n}\ntable[_ngcontent-%COMP%]   .uc-table-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  color: black;\n}\ntable[_ngcontent-%COMP%]   .uc-table-header-row[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(n) {\n  background-color: #d72600;\n}\ntable[_ngcontent-%COMP%]   .uc-table-header-row[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: #ecd407;\n}\ntable[_ngcontent-%COMP%]   .uc-table-header-row[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(3n) {\n  background-color: #379711;\n}\ntable[_ngcontent-%COMP%]   .uc-table-header-row[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(4n) {\n  background-color: #0956bf;\n}\n\ndiv[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  margin-right: 10px;\n}\ndiv[_ngcontent-%COMP%]   select[_ngcontent-%COMP%], div[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], div[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  margin-right: 10px;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbWFpbi9nYW1lLXBhZ2UvZ2FtZS1wYWdlLmNvbXBvbmVudC5zY3NzIiwid2VicGFjazovLy4vc3JjL3N0eWxpbmdzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxZQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7QUFERjs7QUFJQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FBREY7O0FBSUE7RUFDRSxpQkFBQTtBQURGOztBQUlBO0VBQ0UsbUJBQUE7RUFDQSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtFQUNBLGFBQUE7QUFERjs7QUFJQTtFQUNFLGlCQUFBO0FBREY7O0FBSUE7RUFDRSxhQUFBO0VBQ0EsaUJBQUE7QUFERjs7QUFJQTtFQUNFLGNDbkNXO0VEb0NYLGlCQUFBO0VBQ0EsMEJBQUE7QUFERjs7QUFJQTtFQUNFLDBCQUFBO0FBREY7O0FBSUE7RUFDRSxXQUFBO0VBQ0EseUJBQUE7RUFDQSxtQkFBQTtBQURGO0FBR0U7O0VBRUUseUJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1QkFBQTtBQURKO0FBR0k7O0VBQ0UsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtBQUFOO0FBS0k7RUFDRSxZQUFBO0FBSE47QUFNSTtFQUNFLHlCQ3pFSztBRHFFWDtBQU1JO0VBQ0UseUJDM0VRO0FEdUVkO0FBTUk7RUFDRSx5QkM3RU87QUR5RWI7QUFNSTtFQUNFLHlCQy9FTTtBRDJFWjs7QUFVRTtFQUNFLGtCQUFBO0FBUEo7QUFVRTs7O0VBR0Usa0JBQUE7QUFSSiIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi8uLi9zdHlsaW5ncy5zY3NzXCI7XHJcblxyXG4udWMtdGFibGUtY2VsbCB7XHJcbiAgd2lkdGg6IDEwMHB4O1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgZm9udC1zaXplOiBsYXJnZTtcclxuICBwYWRkaW5nOiAwLjVyZW07XHJcbn1cclxuXHJcbi51Yy1zY29yZS1pbmZvIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcblxyXG4udWMtc2NvcmUge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4udWMtaW5mby1jb250YWluZXIge1xyXG4gIG1hcmdpbi1ib3R0b206IDFyZW07XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBtYXJnaW4tdG9wOiAwO1xyXG59XHJcblxyXG4udWMtZWRpdC1idXR0b24ge1xyXG4gIG1hcmdpbi1sZWZ0OiAxcmVtO1xyXG59XHJcblxyXG4udWMtdGhlYWRlciB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxufVxyXG5cclxuLnVjLXdpbm5lci1jZWxsIHtcclxuICBjb2xvcjogJGJhc2UtZ3JlZW47XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbn1cclxuXHJcbi51Yy1jdXJyZW50LXNodWZmbGVyLWNlbGwge1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG59XHJcblxyXG50YWJsZSB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG5cclxuICB0aCxcclxuICB0ZCB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAkYmFzZS15ZWxsb3c7XHJcbiAgICBwYWRkaW5nOiA4cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBlbmQ7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xyXG5cclxuICAgIGlucHV0IHtcclxuICAgICAgd2lkdGg6IDQwcHg7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICB0ZXh0LWFsaWduOiBlbmQ7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudWMtdGFibGUtaGVhZGVyLXJvdyB7XHJcbiAgICB0aCB7XHJcbiAgICAgIGNvbG9yOiBibGFjaztcclxuICAgIH1cclxuXHJcbiAgICA6bnRoLWNoaWxkKG4pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UtcmVkO1xyXG4gICAgfVxyXG4gICAgOm50aC1jaGlsZCgybikge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFzZS15ZWxsb3c7XHJcbiAgICB9XHJcbiAgICA6bnRoLWNoaWxkKDNuKSB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRiYXNlLWdyZWVuO1xyXG4gICAgfVxyXG4gICAgOm50aC1jaGlsZCg0bikge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFzZS1ibHVlO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuZGl2IHtcclxuICBsYWJlbCB7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbiAgfVxyXG5cclxuICBzZWxlY3QsXHJcbiAgaW5wdXQsXHJcbiAgYnV0dG9uIHtcclxuICAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICB9XHJcbn1cclxuIiwiJGJhc2UtcmVkOiAjZDcyNjAwOyAvLyByZWRcclxuJGJhc2UteWVsbG93OiAjZWNkNDA3OyAvLyB5ZWxsb3dcclxuJGJhc2UtZ3JlZW46ICMzNzk3MTE7IC8vIGdyZWVuXHJcbiRiYXNlLWJsdWU6ICMwOTU2YmY7IC8vIGJsdWVcclxuXHJcbiRtYWluLWJhY2tncm91bmQ6ICMxMjEyMTI7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+    styles: [".uc-score-info[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.uc-score[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.uc-info-container[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 0;\n}\n\n.uc-edit-button[_ngcontent-%COMP%] {\n  margin-left: 1rem;\n}\n\n.uc-winner-cell[_ngcontent-%COMP%] {\n  color: #379711;\n  font-weight: bold;\n  text-decoration: underline;\n}\n\n.uc-current-shuffler-cell[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n\n.uc-table[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0.4rem 0;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%] {\n  width: 35px;\n  margin: 0;\n  text-align: right;\n  padding: 5px;\n  border-radius: 3px;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(n) {\n  background-color: #d72600;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: #ecd407;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(3n) {\n  background-color: #379711;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(4n) {\n  background-color: #0956bf;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   .uc-table-cell-player[_ngcontent-%COMP%] {\n  color: black;\n  font-weight: bold;\n  text-align: center;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-scoreboard[_ngcontent-%COMP%] {\n  max-height: 60vh;\n  overflow-y: scroll;\n}\n\n.uc-button-container[_ngcontent-%COMP%] {\n  margin-top: 1rem;\n}\n\n.uc-seperator[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid #ecd407;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbWFpbi9nYW1lLXBhZ2UvZ2FtZS1wYWdlLmNvbXBvbmVudC5zY3NzIiwid2VicGFjazovLy4vc3JjL3N0eWxpbmdzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQURGOztBQUlBO0VBQ0UsaUJBQUE7QUFERjs7QUFJQTtFQUNFLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0FBREY7O0FBSUE7RUFDRSxpQkFBQTtBQURGOztBQUlBO0VBQ0UsY0N2Qlc7RUR3QlgsaUJBQUE7RUFDQSwwQkFBQTtBQURGOztBQUlBO0VBQ0UsMEJBQUE7QUFERjs7QUFJQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtBQURGO0FBR0U7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxpQkFBQTtBQURKO0FBR0k7RUFDRSxXQUFBO0VBQ0EsU0FBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FBRE47QUFHTTtFQUNFLFdBQUE7QUFEUjtBQU9JO0VBQ0UseUJDMURLO0FEcURYO0FBT0k7RUFDRSx5QkM1RFE7QUR1RGQ7QUFPSTtFQUNFLHlCQzlETztBRHlEYjtBQU9JO0VBQ0UseUJDaEVNO0FEMkRaO0FBUUk7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQU5OO0FBVUU7RUFDRSxnQkFBQTtFQUNBLGtCQUFBO0FBUko7O0FBWUE7RUFDRSxnQkFBQTtBQVRGOztBQVlBO0VBQ0UsV0FBQTtFQUNBLGdDQUFBO0FBVEYiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc3R5bGluZ3Muc2Nzc1wiO1xyXG5cclxuLnVjLXNjb3JlLWluZm8ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbn1cclxuXHJcbi51Yy1zY29yZSB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi51Yy1pbmZvLWNvbnRhaW5lciB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbi10b3A6IDA7XHJcbn1cclxuXHJcbi51Yy1lZGl0LWJ1dHRvbiB7XHJcbiAgbWFyZ2luLWxlZnQ6IDFyZW07XHJcbn1cclxuXHJcbi51Yy13aW5uZXItY2VsbCB7XHJcbiAgY29sb3I6ICRiYXNlLWdyZWVuO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG59XHJcblxyXG4udWMtY3VycmVudC1zaHVmZmxlci1jZWxsIHtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxufVxyXG5cclxuLnVjLXRhYmxlIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcblxyXG4gIC51Yy10YWJsZS1yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIHBhZGRpbmc6IDAuNHJlbSAwO1xyXG5cclxuICAgIC51Yy10YWJsZS1jZWxsIHtcclxuICAgICAgd2lkdGg6IDM1cHg7XHJcbiAgICAgIG1hcmdpbjogMDtcclxuICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICAgIHBhZGRpbmc6IDVweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG5cclxuICAgICAgaW5wdXQge1xyXG4gICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudWMtdGFibGUtcm93LXBsYXllcnMge1xyXG4gICAgOm50aC1jaGlsZChuKSB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRiYXNlLXJlZDtcclxuICAgIH1cclxuICAgIDpudGgtY2hpbGQoMm4pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UteWVsbG93O1xyXG4gICAgfVxyXG4gICAgOm50aC1jaGlsZCgzbikge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFzZS1ncmVlbjtcclxuICAgIH1cclxuICAgIDpudGgtY2hpbGQoNG4pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UtYmx1ZTtcclxuICAgIH1cclxuXHJcbiAgICAudWMtdGFibGUtY2VsbC1wbGF5ZXIge1xyXG4gICAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudWMtc2NvcmVib2FyZCB7XHJcbiAgICBtYXgtaGVpZ2h0OiA2MHZoO1xyXG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xyXG4gIH1cclxufVxyXG5cclxuLnVjLWJ1dHRvbi1jb250YWluZXIge1xyXG4gIG1hcmdpbi10b3A6IDFyZW07XHJcbn1cclxuXHJcbi51Yy1zZXBlcmF0b3Ige1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAkYmFzZS15ZWxsb3c7XHJcbn1cclxuIiwiJGJhc2UtcmVkOiAjZDcyNjAwOyAvLyByZWRcclxuJGJhc2UteWVsbG93OiAjZWNkNDA3OyAvLyB5ZWxsb3dcclxuJGJhc2UtZ3JlZW46ICMzNzk3MTE7IC8vIGdyZWVuXHJcbiRiYXNlLWJsdWU6ICMwOTU2YmY7IC8vIGJsdWVcclxuXHJcbiRtYWluLWJhY2tncm91bmQ6ICMxMjEyMTI7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
   });
 }
 

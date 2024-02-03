@@ -13,37 +13,38 @@
   </div>
 </div>
 
-<table>
-  <thead>
-    <tr class="uc-table-header-row">
-      <th
-        *ngFor="let player of players"
-        [ngClass]="{ 'uc-current-shuffler-cell': shufflePlayer === player }"
-      >
-        {{ player }}
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let e of [].constructor(currentRound); let round = index">
-      <td
+<div class="uc-table uc-space-bottom">
+  <div class="uc-table-row uc-table-row-players">
+    <div
+      class="uc-table-cell uc-table-cell-player"
+      *ngFor="let player of players"
+      [ngClass]="{ 'uc-current-shuffler-cell': shufflePlayer === player }"
+    >
+      {{ player.slice(0, 1) }}{{ player.slice(-1) }}
+    </div>
+  </div>
+  <div class="uc-seperator"></div>
+  <div class="uc-scoreboard">
+    <div
+      class="uc-table-row"
+      *ngFor="let e of [].constructor(currentRound); let round = index"
+    >
+      <div
+        class="uc-table-cell"
         *ngFor="let player of players"
         [ngClass]="{ 'uc-winner-cell': scores[player][round].won }"
       >
         {{ scores[player][round].sumScore }}
-      </td>
-    </tr>
-    <tr>
-      <td *ngFor="let player of players">
-        <input
-          type="number"
-          class="uc-score-counter"
-          [formControl]="$any(getPlayerControl(player))"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
+      </div>
+    </div>
+    <div class="uc-table-row">
+      <div class="uc-table-cell" *ngFor="let player of players">
+        <input type="number" [formControl]="$any(getPlayerControl(player))" />
+      </div>
+    </div>
+  </div>
+</div>
+
 <div *ngIf="!this.isFinished" class="uc-default-button" (click)="addScores()">
   Save
 </div>

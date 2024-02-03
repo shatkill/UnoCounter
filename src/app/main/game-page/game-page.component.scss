@@ -1,12 +1,5 @@
 @import "../../../stylings.scss";
 
-.uc-table-cell {
-  width: 100px;
-  text-align: left;
-  font-size: large;
-  padding: 0.5rem;
-}
-
 .uc-score-info {
   display: flex;
   justify-content: space-between;
@@ -29,11 +22,6 @@
   margin-left: 1rem;
 }
 
-.uc-theader {
-  display: flex;
-  font-weight: bold;
-}
-
 .uc-winner-cell {
   color: $base-green;
   font-weight: bold;
@@ -44,32 +32,29 @@
   text-decoration: underline;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+.uc-table {
+  display: flex;
+  flex-direction: column;
 
-  th,
-  td {
-    border: 1px solid $base-yellow;
-    padding: 8px;
-    text-align: end;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .uc-table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
 
-    input {
-      width: 40px;
-      font-weight: bold;
-      text-align: end;
+    .uc-table-cell {
+      width: 35px;
+      margin: 0;
+      text-align: right;
+      padding: 5px;
+      border-radius: 3px;
+
+      input {
+        width: 100%;
+      }
     }
   }
 
-  .uc-table-header-row {
-    th {
-      color: black;
-    }
-
+  .uc-table-row-players {
     :nth-child(n) {
       background-color: $base-red;
     }
@@ -82,17 +67,25 @@ table {
     :nth-child(4n) {
       background-color: $base-blue;
     }
+
+    .uc-table-cell-player {
+      color: black;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .uc-scoreboard {
+    max-height: 60vh;
+    overflow-y: scroll;
   }
 }
 
-div {
-  label {
-    margin-right: 10px;
-  }
+.uc-button-container {
+  margin-top: 1rem;
+}
 
-  select,
-  input,
-  button {
-    margin-right: 10px;
-  }
+.uc-seperator {
+  width: 100%;
+  border-bottom: 1px solid $base-yellow;
 }
