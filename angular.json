@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "UnoCounter:build"
+            "buildTarget": "UnoCounter:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "UnoCounter:build:production"
+              "buildTarget": "UnoCounter:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "UnoCounter:build"
+            "buildTarget": "UnoCounter:build"
           }
         },
         "test": {

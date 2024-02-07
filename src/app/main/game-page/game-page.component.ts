@@ -16,32 +16,41 @@ export interface Score {
   styleUrls: ['./game-page.component.scss'],
 })
 export class GamePageComponent {
-  public players!: string[] | null;
+  protected players!: string[] | null;
 
-  public shufflePlayer: string | undefined;
-  public maxScore: number;
-  public isFinished = false;
-  public halvePointsActivated = false;
+  protected shufflePlayer: string | undefined;
+  protected maxScore!: number;
+  protected isFinished = false;
+  protected halvePointsActivated = false;
 
-  public scores: { [player: string]: Score[] } = {};
+  protected scores: { [player: string]: Score[] } = {};
 
-  public formGroup!: ReturnType<typeof this.createFormGroup>;
+  protected formGroup!: ReturnType<typeof this.createFormGroup>;
+
+  protected maxScoreControl;
+  protected maxScoreEditingActive = false;
 
   constructor(
     private dataSaveService: DataSaveService,
     private dialog: MatDialog
   ) {
     this.players = this.dataSaveService.players;
-    this.maxScore = this.dataSaveService.maxScore;
+    this.updateMaxScore();
+
+    this.maxScoreControl = new FormControl<number>(
+      this.dataSaveService.maxScore
+    );
+
     this.halvePointsActivated = this.dataSaveService.halvePointsActivated;
     this.scores = this.dataSaveService.scores;
 
     this.formGroup = this.createFormGroup();
 
     this.changeShufflePlayerTurn();
+    this.determineLoser();
   }
 
-  public addScores() {
+  protected addScores() {
     if (!this.thereIsOneWinner()) {
       return;
     }
@@ -74,8 +83,10 @@ export class GamePageComponent {
     this.players?.forEach((player) => {
       if (this.getCurrentScoreOfPlayer(player) >= this.maxScore) {
         this.isFinished = true;
+        return;
       }
     });
+    this.isFinished = false;
   }
 
   public getCurrentScoreOfPlayer(player: string) {
@@ -86,13 +97,13 @@ export class GamePageComponent {
     return this.formGroup.controls[player];
   }
 
-  public changeShufflePlayerTurn() {
+  protected changeShufflePlayerTurn() {
     this.shufflePlayer = this.players
       ? this.players[(this.currentRound - 1) % this.players.length]
       : '';
   }
 
-  public createFormGroup() {
+  private createFormGroup() {
     const group: any = {};
 
     this.players?.forEach((player) => {
@@ -101,7 +112,7 @@ export class GamePageComponent {
     return new FormGroup(group);
   }
 
-  public thereIsOneWinner() {
+  private thereIsOneWinner() {
     let winners = 0;
     this.players?.forEach((player) => {
       if (this.getPlayerControl(player).value === null) winners++;
@@ -110,20 +121,31 @@ export class GamePageComponent {
     return winners === 1;
   }
 
-  public editMaxScore() {}
+  protected toggleScoreEditing() {
+    this.maxScoreEditingActive = !this.maxScoreEditingActive;
+  }
 
-  public openStatistics(): void {
-    const dialogRef = this.dialog.open(StatisticsDialogComponent, {
+  protected updateMaxScore() {
+    this.maxScore = this.dataSaveService.maxScore;
+  }
+
+  protected editMaxScore() {
+    if (this.maxScoreControl.value)
+      this.dataSaveService.maxScore = this.maxScoreControl.value;
+
+    this.updateMaxScore();
+    this.toggleScoreEditing();
+    this.determineLoser();
+  }
+
+  protected openStatistics(): void {
+    this.dialog.open(StatisticsDialogComponent, {
       data: {
         players: this.players,
         scores: this.scores,
         rounds: this.currentRound,
       },
       maxWidth: '500px',
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
     });
   }
 
@@ -132,11 +154,17 @@ export class GamePageComponent {
     return this.scores[this.players[0]].length;
   }
 
-  public undoLastScores() {
+  protected undoLastScores() {
     if (this.currentRound < 2) return;
 
     this.players?.forEach((player) => {
-      this.getPlayerControl(player).setValue(this.scores[player].pop()?.scoreCurrentRound);
+      this.getPlayerControl(player).setValue(
+        this.scores[player].pop()?.scoreCurrentRound
+      );
     });
+  }
+
+  protected getPlayerRepresentation(player: string) {
+    return player.slice(0, 1) + player.slice(-1);
   }
 }

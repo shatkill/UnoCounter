@@ -1,9 +1,25 @@
 <div class="uc-info-container">
   <div class="uc-score-info">
-    <div class="uc-score">Max Score: {{ maxScore }}</div>
-    <div class="uc-edit-button" (click)="editMaxScore()">
+    <div *ngIf="!maxScoreEditingActive" class="uc-score">
+      Max Score: {{ maxScore }}
+    </div>
+    <div *ngIf="maxScoreEditingActive" class="uc-score">
+      Max Score: <input class="uc-max-score-edit-input" [formControl]="maxScoreControl" />
+    </div>
+    <div
+      *ngIf="!maxScoreEditingActive"
+      class="uc-edit-button"
+      (click)="toggleScoreEditing()"
+    >
       <mat-icon>edit</mat-icon>
     </div>
+  </div>
+  <div
+    *ngIf="maxScoreEditingActive"
+    class="uc-edit-button"
+    (click)="editMaxScore()"
+  >
+    <mat-icon>check</mat-icon>
   </div>
   <div class="uc-edit-button" (click)="undoLastScores()">
     <mat-icon>undo</mat-icon>
@@ -20,7 +36,7 @@
       *ngFor="let player of players"
       [ngClass]="{ 'uc-current-shuffler-cell': shufflePlayer === player }"
     >
-      {{ player.slice(0, 1) }}{{ player.slice(-1) }}
+      {{ getPlayerRepresentation(player) }}
     </div>
   </div>
   <div class="uc-seperator"></div>
