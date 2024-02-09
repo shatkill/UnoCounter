@@ -1,11 +1,12 @@
 <div class="uc-info-container">
   <div class="uc-score-info">
-    <div *ngIf="!maxScoreEditingActive" class="uc-score">
-      Max Score: {{ maxScore }}
+    @if (maxScoreEditingActive) {
+    <div class="uc-score">
+      Max Score:
+      <input class="uc-max-score-edit-input" [formControl]="maxScoreControl" />
     </div>
-    <div *ngIf="maxScoreEditingActive" class="uc-score">
-      Max Score: <input class="uc-max-score-edit-input" [formControl]="maxScoreControl" />
-    </div>
+    } @else {
+    <div class="uc-score">Max Score: {{ maxScore }}</div>
     <div
       *ngIf="!maxScoreEditingActive"
       class="uc-edit-button"
@@ -13,6 +14,7 @@
     >
       <mat-icon>edit</mat-icon>
     </div>
+    }
   </div>
   <div
     *ngIf="maxScoreEditingActive"
