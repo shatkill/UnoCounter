@@ -163,86 +163,136 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const _c0 = function (a0) {
-  return {
-    "uc-current-shuffler-cell": a0
-  };
-};
-function GamePageComponent_div_15_Template(rf, ctx) {
+function GamePageComponent_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Max Score: ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "input", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const player_r4 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](3, _c0, ctx_r0.shufflePlayer === player_r4));
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate2"](" ", player_r4.slice(0, 1), "", player_r4.slice(-1), " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("formControl", ctx_r0.maxScoreControl);
   }
 }
-const _c1 = function (a0) {
-  return {
-    "uc-winner-cell": a0
-  };
-};
-function GamePageComponent_div_18_div_1_Template(rf, ctx) {
+function GamePageComponent_Conditional_3_div_2_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 16);
+    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Conditional_3_div_2_Template_div_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9);
+      const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r8.toggleScoreEditing());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "mat-icon");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "edit");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+  }
+}
+function GamePageComponent_Conditional_3_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, GamePageComponent_Conditional_3_div_2_Template, 3, 0, "div", 3);
+  }
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("Max Score: ", ctx_r1.maxScore, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx_r1.maxScoreEditingActive);
+  }
+}
+function GamePageComponent_div_4_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_div_4_Template_div_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r11);
+      const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r10.editMaxScore());
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "mat-icon");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "check");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+  }
+}
+const _c0 = a0 => ({
+  "uc-current-shuffler-cell": a0
+});
+function GamePageComponent_div_13_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const player_r8 = ctx.$implicit;
-    const round_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().index;
-    const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c1, ctx_r7.scores[player_r8][round_r6].won));
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r7.scores[player_r8][round_r6].sumScore, " ");
+    const player_r12 = ctx.$implicit;
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, ctx_r3.shufflePlayer === player_r12));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r3.getPlayerRepresentation(player_r12), " ");
+  }
+}
+const _c1 = a0 => ({
+  "uc-winner-cell": a0
+});
+function GamePageComponent_div_16_div_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const player_r16 = ctx.$implicit;
+    const round_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().index;
+    const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c1, ctx_r15.scores[player_r16][round_r14].won));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"](" ", ctx_r15.scores[player_r16][round_r14].sumScore, " ");
+  }
+}
+function GamePageComponent_div_16_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GamePageComponent_div_16_div_1_Template, 2, 4, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r4.players);
   }
 }
 function GamePageComponent_div_18_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, GamePageComponent_div_18_div_1_Template, 2, 4, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
   if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r1.players);
+    const player_r18 = ctx.$implicit;
+    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("formControl", ctx_r5.getPlayerControl(player_r18));
   }
 }
-function GamePageComponent_div_20_Template(rf, ctx) {
+function GamePageComponent_div_19_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-  }
-  if (rf & 2) {
-    const player_r10 = ctx.$implicit;
-    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("formControl", ctx_r2.getPlayerControl(player_r10));
-  }
-}
-function GamePageComponent_div_21_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_div_21_Template_div_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r12);
-      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r11.addScores());
+    const _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_div_19_Template_div_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r20);
+      const ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵresetView"](ctx_r19.addScores());
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Save\n");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
-const _c2 = function () {
-  return [];
-};
+const _c2 = () => [];
 class GamePageComponent {
   constructor(dataSaveService, dialog) {
     this.dataSaveService = dataSaveService;
@@ -250,12 +300,15 @@ class GamePageComponent {
     this.isFinished = false;
     this.halvePointsActivated = false;
     this.scores = {};
+    this.maxScoreEditingActive = false;
     this.players = this.dataSaveService.players;
-    this.maxScore = this.dataSaveService.maxScore;
+    this.updateMaxScore();
+    this.maxScoreControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControl(this.dataSaveService.maxScore);
     this.halvePointsActivated = this.dataSaveService.halvePointsActivated;
     this.scores = this.dataSaveService.scores;
     this.formGroup = this.createFormGroup();
     this.changeShufflePlayerTurn();
+    this.determineLoser();
   }
   addScores() {
     if (!this.thereIsOneWinner()) {
@@ -280,8 +333,10 @@ class GamePageComponent {
     this.players?.forEach(player => {
       if (this.getCurrentScoreOfPlayer(player) >= this.maxScore) {
         this.isFinished = true;
+        return;
       }
     });
+    this.isFinished = false;
   }
   getCurrentScoreOfPlayer(player) {
     return this.scores[player][this.scores[player].length - 1].sumScore;
@@ -306,18 +361,26 @@ class GamePageComponent {
     });
     return winners === 1;
   }
-  editMaxScore() {}
+  toggleScoreEditing() {
+    this.maxScoreEditingActive = !this.maxScoreEditingActive;
+  }
+  updateMaxScore() {
+    this.maxScore = this.dataSaveService.maxScore;
+  }
+  editMaxScore() {
+    if (this.maxScoreControl.value) this.dataSaveService.maxScore = this.maxScoreControl.value;
+    this.updateMaxScore();
+    this.toggleScoreEditing();
+    this.determineLoser();
+  }
   openStatistics() {
-    const dialogRef = this.dialog.open(_statistics_dialog_statistics_dialog_component__WEBPACK_IMPORTED_MODULE_0__.StatisticsDialogComponent, {
+    this.dialog.open(_statistics_dialog_statistics_dialog_component__WEBPACK_IMPORTED_MODULE_0__.StatisticsDialogComponent, {
       data: {
         players: this.players,
         scores: this.scores,
         rounds: this.currentRound
       },
       maxWidth: '500px'
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
   get currentRound() {
@@ -330,67 +393,66 @@ class GamePageComponent {
       this.getPlayerControl(player).setValue(this.scores[player].pop()?.scoreCurrentRound);
     });
   }
+  getPlayerRepresentation(player) {
+    return player.slice(0, 1) + player.slice(-1);
+  }
   static #_ = this.ɵfac = function GamePageComponent_Factory(t) {
     return new (t || GamePageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_shared_data_save_service__WEBPACK_IMPORTED_MODULE_1__.DataSaveService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_4__.MatDialog));
   };
   static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
     type: GamePageComponent,
     selectors: [["uc-game-page"]],
-    decls: 22,
-    vars: 6,
-    consts: [[1, "uc-info-container"], [1, "uc-score-info"], [1, "uc-score"], [1, "uc-edit-button", 3, "click"], [1, "uc-info-button", 3, "click"], [1, "uc-table", "uc-space-bottom"], [1, "uc-table-row", "uc-table-row-players"], ["class", "uc-table-cell uc-table-cell-player", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-seperator"], [1, "uc-scoreboard"], ["class", "uc-table-row", 4, "ngFor", "ngForOf"], [1, "uc-table-row"], ["class", "uc-table-cell", 4, "ngFor", "ngForOf"], ["class", "uc-default-button", 3, "click", 4, "ngIf"], [1, "uc-table-cell", "uc-table-cell-player", 3, "ngClass"], ["class", "uc-table-cell", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-table-cell", 3, "ngClass"], [1, "uc-table-cell"], ["type", "number", 3, "formControl"], [1, "uc-default-button", 3, "click"]],
+    decls: 20,
+    vars: 7,
+    consts: [[1, "uc-info-container"], [1, "uc-score-info"], ["class", "uc-score"], ["class", "uc-edit-button", 3, "click", 4, "ngIf"], [1, "uc-edit-button", 3, "click"], [1, "uc-info-button", 3, "click"], [1, "uc-table", "uc-space-bottom"], [1, "uc-table-row", "uc-table-row-players"], ["class", "uc-table-cell uc-table-cell-player", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-seperator"], [1, "uc-scoreboard"], ["class", "uc-table-row", 4, "ngFor", "ngForOf"], [1, "uc-table-row"], ["class", "uc-table-cell", 4, "ngFor", "ngForOf"], ["class", "uc-default-button", 3, "click", 4, "ngIf"], [1, "uc-score"], [1, "uc-max-score-edit-input", 3, "formControl"], [1, "uc-table-cell", "uc-table-cell-player", 3, "ngClass"], ["class", "uc-table-cell", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "uc-table-cell", 3, "ngClass"], [1, "uc-table-cell"], ["type", "number", 3, "formControl"], [1, "uc-default-button", 3, "click"]],
     template: function GamePageComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, GamePageComponent_Conditional_2_Template, 3, 1, "div", 2)(3, GamePageComponent_Conditional_3_Template, 3, 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Template_div_click_4_listener() {
-          return ctx.editMaxScore();
-        });
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "mat-icon");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, "edit");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Template_div_click_7_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, GamePageComponent_div_4_Template, 3, 0, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Template_div_click_5_listener() {
           return ctx.undoLastScores();
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "mat-icon");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](9, "undo");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "undo");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Template_div_click_10_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function GamePageComponent_Template_div_click_8_listener() {
           return ctx.openStatistics();
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "mat-icon");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "info");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "mat-icon");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10, "info");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 5)(14, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](15, GamePageComponent_div_15_Template, 2, 5, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "div", 6)(12, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](13, GamePageComponent_div_13_Template, 2, 4, "div", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](16, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](18, GamePageComponent_div_18_Template, 2, 1, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](20, GamePageComponent_div_20_Template, 2, 1, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](14, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](16, GamePageComponent_div_16_Template, 2, 1, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](18, GamePageComponent_div_18_Template, 2, 1, "div", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](21, GamePageComponent_div_21_Template, 2, 0, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](19, GamePageComponent_div_19_Template, 2, 0, "div", 14);
       }
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate1"]("Max Score: ", ctx.maxScore, "");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵconditional"](2, ctx.maxScoreEditingActive ? 2 : 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.maxScoreEditingActive);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.players);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](5, _c2).constructor(ctx.currentRound));
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction0"](6, _c2).constructor(ctx.currentRound));
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.players);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.isFinished);
       }
     },
     dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlDirective, _angular_material_icon__WEBPACK_IMPORTED_MODULE_6__.MatIcon],
-    styles: [".uc-score-info[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.uc-score[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.uc-info-container[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 0;\n}\n\n.uc-edit-button[_ngcontent-%COMP%] {\n  margin-left: 1rem;\n}\n\n.uc-winner-cell[_ngcontent-%COMP%] {\n  color: #379711;\n  font-weight: bold;\n  text-decoration: underline;\n}\n\n.uc-current-shuffler-cell[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n\n.uc-table[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0.4rem 0;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%] {\n  width: 35px;\n  margin: 0;\n  text-align: right;\n  padding: 5px;\n  border-radius: 3px;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(n) {\n  background-color: #d72600;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: #ecd407;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(3n) {\n  background-color: #379711;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(4n) {\n  background-color: #0956bf;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   .uc-table-cell-player[_ngcontent-%COMP%] {\n  color: black;\n  font-weight: bold;\n  text-align: center;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-scoreboard[_ngcontent-%COMP%] {\n  max-height: 60vh;\n  overflow-y: scroll;\n}\n\n.uc-button-container[_ngcontent-%COMP%] {\n  margin-top: 1rem;\n}\n\n.uc-seperator[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid #ecd407;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbWFpbi9nYW1lLXBhZ2UvZ2FtZS1wYWdlLmNvbXBvbmVudC5zY3NzIiwid2VicGFjazovLy4vc3JjL3N0eWxpbmdzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQURGOztBQUlBO0VBQ0UsaUJBQUE7QUFERjs7QUFJQTtFQUNFLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0FBREY7O0FBSUE7RUFDRSxpQkFBQTtBQURGOztBQUlBO0VBQ0UsY0N2Qlc7RUR3QlgsaUJBQUE7RUFDQSwwQkFBQTtBQURGOztBQUlBO0VBQ0UsMEJBQUE7QUFERjs7QUFJQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtBQURGO0FBR0U7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxpQkFBQTtBQURKO0FBR0k7RUFDRSxXQUFBO0VBQ0EsU0FBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FBRE47QUFHTTtFQUNFLFdBQUE7QUFEUjtBQU9JO0VBQ0UseUJDMURLO0FEcURYO0FBT0k7RUFDRSx5QkM1RFE7QUR1RGQ7QUFPSTtFQUNFLHlCQzlETztBRHlEYjtBQU9JO0VBQ0UseUJDaEVNO0FEMkRaO0FBUUk7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQU5OO0FBVUU7RUFDRSxnQkFBQTtFQUNBLGtCQUFBO0FBUko7O0FBWUE7RUFDRSxnQkFBQTtBQVRGOztBQVlBO0VBQ0UsV0FBQTtFQUNBLGdDQUFBO0FBVEYiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc3R5bGluZ3Muc2Nzc1wiO1xyXG5cclxuLnVjLXNjb3JlLWluZm8ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbn1cclxuXHJcbi51Yy1zY29yZSB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi51Yy1pbmZvLWNvbnRhaW5lciB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbi10b3A6IDA7XHJcbn1cclxuXHJcbi51Yy1lZGl0LWJ1dHRvbiB7XHJcbiAgbWFyZ2luLWxlZnQ6IDFyZW07XHJcbn1cclxuXHJcbi51Yy13aW5uZXItY2VsbCB7XHJcbiAgY29sb3I6ICRiYXNlLWdyZWVuO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG59XHJcblxyXG4udWMtY3VycmVudC1zaHVmZmxlci1jZWxsIHtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxufVxyXG5cclxuLnVjLXRhYmxlIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcblxyXG4gIC51Yy10YWJsZS1yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIHBhZGRpbmc6IDAuNHJlbSAwO1xyXG5cclxuICAgIC51Yy10YWJsZS1jZWxsIHtcclxuICAgICAgd2lkdGg6IDM1cHg7XHJcbiAgICAgIG1hcmdpbjogMDtcclxuICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICAgIHBhZGRpbmc6IDVweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG5cclxuICAgICAgaW5wdXQge1xyXG4gICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudWMtdGFibGUtcm93LXBsYXllcnMge1xyXG4gICAgOm50aC1jaGlsZChuKSB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRiYXNlLXJlZDtcclxuICAgIH1cclxuICAgIDpudGgtY2hpbGQoMm4pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UteWVsbG93O1xyXG4gICAgfVxyXG4gICAgOm50aC1jaGlsZCgzbikge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFzZS1ncmVlbjtcclxuICAgIH1cclxuICAgIDpudGgtY2hpbGQoNG4pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UtYmx1ZTtcclxuICAgIH1cclxuXHJcbiAgICAudWMtdGFibGUtY2VsbC1wbGF5ZXIge1xyXG4gICAgICBjb2xvcjogYmxhY2s7XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudWMtc2NvcmVib2FyZCB7XHJcbiAgICBtYXgtaGVpZ2h0OiA2MHZoO1xyXG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xyXG4gIH1cclxufVxyXG5cclxuLnVjLWJ1dHRvbi1jb250YWluZXIge1xyXG4gIG1hcmdpbi10b3A6IDFyZW07XHJcbn1cclxuXHJcbi51Yy1zZXBlcmF0b3Ige1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAkYmFzZS15ZWxsb3c7XHJcbn1cclxuIiwiJGJhc2UtcmVkOiAjZDcyNjAwOyAvLyByZWRcclxuJGJhc2UteWVsbG93OiAjZWNkNDA3OyAvLyB5ZWxsb3dcclxuJGJhc2UtZ3JlZW46ICMzNzk3MTE7IC8vIGdyZWVuXHJcbiRiYXNlLWJsdWU6ICMwOTU2YmY7IC8vIGJsdWVcclxuXHJcbiRtYWluLWJhY2tncm91bmQ6ICMxMjEyMTI7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+    styles: [".uc-score-info[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.uc-score[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.uc-info-container[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-top: 0;\n}\n\n.uc-edit-button[_ngcontent-%COMP%] {\n  margin-left: 1rem;\n}\n\n.uc-winner-cell[_ngcontent-%COMP%] {\n  color: #379711;\n  font-weight: bold;\n  text-decoration: underline;\n}\n\n.uc-current-shuffler-cell[_ngcontent-%COMP%] {\n  text-decoration: underline;\n}\n\n.uc-max-score-edit-input[_ngcontent-%COMP%] {\n  max-width: 35px;\n}\n\n.uc-table[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  padding: 0.4rem 0;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%] {\n  width: 35px;\n  margin: 0;\n  text-align: right;\n  padding: 5px;\n  border-radius: 3px;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row[_ngcontent-%COMP%]   .uc-table-cell[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(n) {\n  background-color: #d72600;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(2n) {\n  background-color: #ecd407;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(3n) {\n  background-color: #379711;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   [_ngcontent-%COMP%]:nth-child(4n) {\n  background-color: #0956bf;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-table-row-players[_ngcontent-%COMP%]   .uc-table-cell-player[_ngcontent-%COMP%] {\n  color: black;\n  font-weight: bold;\n  text-align: center;\n}\n.uc-table[_ngcontent-%COMP%]   .uc-scoreboard[_ngcontent-%COMP%] {\n  max-height: 60vh;\n  overflow-y: scroll;\n}\n\n.uc-button-container[_ngcontent-%COMP%] {\n  margin-top: 1rem;\n}\n\n.uc-seperator[_ngcontent-%COMP%] {\n  width: 100%;\n  border-bottom: 1px solid #ecd407;\n}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbWFpbi9nYW1lLXBhZ2UvZ2FtZS1wYWdlLmNvbXBvbmVudC5zY3NzIiwid2VicGFjazovLy4vc3JjL3N0eWxpbmdzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQURGOztBQUlBO0VBQ0UsaUJBQUE7QUFERjs7QUFJQTtFQUNFLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0FBREY7O0FBSUE7RUFDRSxpQkFBQTtBQURGOztBQUlBO0VBQ0UsY0N2Qlc7RUR3QlgsaUJBQUE7RUFDQSwwQkFBQTtBQURGOztBQUlBO0VBQ0UsMEJBQUE7QUFERjs7QUFJQTtFQUNFLGVBQUE7QUFERjs7QUFJQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtBQURGO0FBR0U7RUFDRSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxpQkFBQTtBQURKO0FBR0k7RUFDRSxXQUFBO0VBQ0EsU0FBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FBRE47QUFHTTtFQUNFLFdBQUE7QUFEUjtBQU9JO0VBQ0UseUJDOURLO0FEeURYO0FBT0k7RUFDRSx5QkNoRVE7QUQyRGQ7QUFPSTtFQUNFLHlCQ2xFTztBRDZEYjtBQU9JO0VBQ0UseUJDcEVNO0FEK0RaO0FBUUk7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQU5OO0FBVUU7RUFDRSxnQkFBQTtFQUNBLGtCQUFBO0FBUko7O0FBWUE7RUFDRSxnQkFBQTtBQVRGOztBQVlBO0VBQ0UsV0FBQTtFQUNBLGdDQUFBO0FBVEYiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vLi4vc3R5bGluZ3Muc2Nzc1wiO1xyXG5cclxuLnVjLXNjb3JlLWluZm8ge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbn1cclxuXHJcbi51Yy1zY29yZSB7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi51Yy1pbmZvLWNvbnRhaW5lciB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbi10b3A6IDA7XHJcbn1cclxuXHJcbi51Yy1lZGl0LWJ1dHRvbiB7XHJcbiAgbWFyZ2luLWxlZnQ6IDFyZW07XHJcbn1cclxuXHJcbi51Yy13aW5uZXItY2VsbCB7XHJcbiAgY29sb3I6ICRiYXNlLWdyZWVuO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG59XHJcblxyXG4udWMtY3VycmVudC1zaHVmZmxlci1jZWxsIHtcclxuICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxufVxyXG5cclxuLnVjLW1heC1zY29yZS1lZGl0LWlucHV0IHtcclxuICBtYXgtd2lkdGg6IDM1cHg7XHJcbn1cclxuXHJcbi51Yy10YWJsZSB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG5cclxuICAudWMtdGFibGUtcm93IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgICBwYWRkaW5nOiAwLjRyZW0gMDtcclxuXHJcbiAgICAudWMtdGFibGUtY2VsbCB7XHJcbiAgICAgIHdpZHRoOiAzNXB4O1xyXG4gICAgICBtYXJnaW46IDA7XHJcbiAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xyXG4gICAgICBwYWRkaW5nOiA1cHg7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDNweDtcclxuXHJcbiAgICAgIGlucHV0IHtcclxuICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLnVjLXRhYmxlLXJvdy1wbGF5ZXJzIHtcclxuICAgIDpudGgtY2hpbGQobikge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmFzZS1yZWQ7XHJcbiAgICB9XHJcbiAgICA6bnRoLWNoaWxkKDJuKSB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRiYXNlLXllbGxvdztcclxuICAgIH1cclxuICAgIDpudGgtY2hpbGQoM24pIHtcclxuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJGJhc2UtZ3JlZW47XHJcbiAgICB9XHJcbiAgICA6bnRoLWNoaWxkKDRuKSB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRiYXNlLWJsdWU7XHJcbiAgICB9XHJcblxyXG4gICAgLnVjLXRhYmxlLWNlbGwtcGxheWVyIHtcclxuICAgICAgY29sb3I6IGJsYWNrO1xyXG4gICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLnVjLXNjb3JlYm9hcmQge1xyXG4gICAgbWF4LWhlaWdodDogNjB2aDtcclxuICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcclxuICB9XHJcbn1cclxuXHJcbi51Yy1idXR0b24tY29udGFpbmVyIHtcclxuICBtYXJnaW4tdG9wOiAxcmVtO1xyXG59XHJcblxyXG4udWMtc2VwZXJhdG9yIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgJGJhc2UteWVsbG93O1xyXG59XHJcbiIsIiRiYXNlLXJlZDogI2Q3MjYwMDsgLy8gcmVkXHJcbiRiYXNlLXllbGxvdzogI2VjZDQwNzsgLy8geWVsbG93XHJcbiRiYXNlLWdyZWVuOiAjMzc5NzExOyAvLyBncmVlblxyXG4kYmFzZS1ibHVlOiAjMDk1NmJmOyAvLyBibHVlXHJcblxyXG4kbWFpbi1iYWNrZ3JvdW5kOiAjMTIxMjEyO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
   });
 }
 
@@ -422,7 +484,7 @@ function StatisticsDialogComponent_th_7_Template(rf, ctx) {
   }
   if (rf & 2) {
     const player_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](player_r2);
   }
 }
@@ -435,7 +497,7 @@ function StatisticsDialogComponent_tr_9_td_3_Template(rf, ctx) {
   if (rf & 2) {
     const player_r5 = ctx.$implicit;
     const statisticType_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", statisticType_r3.calcFunction(player_r5), " ");
   }
 }
@@ -452,7 +514,7 @@ function StatisticsDialogComponent_tr_9_Template(rf, ctx) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](statisticType_r3.id.name);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.data.players);
   }
 }
@@ -692,7 +754,7 @@ function MainLandingComponent_div_17_Template(rf, ctx) {
   }
   if (rf & 2) {
     const player_r4 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", player_r4, " ");
   }
 }
@@ -821,7 +883,7 @@ class MainLandingComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formControl", ctx.scoreControl);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("Players: ", ctx.selectedPlayers.length, "");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.selectedPlayers.length == 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.selectedPlayers);
