@@ -1,61 +1,41 @@
-@import "../../../../stylings.scss";
+@import "base-values";
 
 .uc-dialog-container {
-  padding: 1rem;
+  padding: $distance-lg;
   background-color: $main-background;
+  max-width: 100vw;
+  overflow: scroll;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-
-  th,
-  td {
-    border: 1px solid $base-yellow;
-    padding: 8px;
-    text-align: end;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    input {
-      width: 40px;
-      font-weight: bold;
-      text-align: end;
-    }
-  }
-
-  .uc-table-header-row {
-    th {
-      color: black;
-    }
-
-    :nth-child(n) {
-      background-color: $base-blue;
-    }
-    :nth-child(2n) {
-      background-color: $base-red;
-    }
-    :nth-child(3n) {
-      background-color: $base-yellow;
-    }
-    :nth-child(4n) {
-      background-color: $base-green;
-    }
-    :first-child {
-      background-color: #111111;
-    }
-  }
+.uc-table-row {
+  display: flex;
 }
 
-div {
-  label {
-    margin-right: 10px;
+.uc-table-cell {
+  width: 60px;
+
+  border: 1px solid $base-yellow;
+  padding: 8px;
+  text-align: end;
+  text-overflow: ellipsis;
+}
+
+.uc-player-data {
+  .uc-player {
+    color: $color-text-dark;
+    font-weight: bold;
   }
 
-  select,
-  input,
-  button {
-    margin-right: 10px;
+  :nth-child(4n + 1) .uc-player {
+    background-color: $base-red;
+  }
+  :nth-child(4n + 2) .uc-player {
+    background-color: $base-yellow;
+  }
+  :nth-child(4n + 3) .uc-player {
+    background-color: $base-green;
+  }
+  :nth-child(4n) .uc-player {
+    background-color: $base-blue;
   }
 }

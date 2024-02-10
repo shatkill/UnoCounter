@@ -1,39 +1,37 @@
-@import "../../../stylings.scss";
-
-.uc-score-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.uc-score {
-  font-weight: bold;
-}
+@import "base-values";
 
 .uc-info-container {
-  margin-bottom: 1rem;
+  margin-bottom: $distance-lg;
   display: flex;
-  justify-content: space-between;
+  gap: $distance-md;
   align-items: center;
-  margin-top: 0;
-}
+  justify-content: space-between;
 
-.uc-edit-button {
-  margin-left: 1rem;
+  .uc-score-info {
+    display: flex;
+    align-items: center;
+    gap: $distance-lg;
+
+    .uc-score {
+      font-weight: bold;
+
+      input {
+        width: 2.5rem;
+        text-align: end;
+      }
+    }
+  }
+
+  .uc-info-button-container {
+    display: flex;
+    gap: $distance-md;
+  }
 }
 
 .uc-winner-cell {
   color: $base-green;
   font-weight: bold;
   text-decoration: underline;
-}
-
-.uc-current-shuffler-cell {
-  text-decoration: underline;
-}
-
-.uc-max-score-edit-input {
-  max-width: 35px;
 }
 
 .uc-table {
@@ -46,26 +44,26 @@
     padding: 0.4rem 0;
 
     .uc-table-cell {
-      width: 35px;
-      margin: 0;
+      width: 45px;
       text-align: right;
       padding: 5px;
-      border-radius: 3px;
+      border-radius: $default-border-radius;
 
       input {
         width: 100%;
+        text-align: end;
       }
     }
   }
 
   .uc-table-row-players {
-    :nth-child(n) {
+    :nth-child(4n + 1) {
       background-color: $base-red;
     }
-    :nth-child(2n) {
+    :nth-child(4n + 2) {
       background-color: $base-yellow;
     }
-    :nth-child(3n) {
+    :nth-child(4n + 3) {
       background-color: $base-green;
     }
     :nth-child(4n) {
@@ -73,7 +71,7 @@
     }
 
     .uc-table-cell-player {
-      color: black;
+      color: $color-text-dark;
       font-weight: bold;
       text-align: center;
     }
@@ -86,7 +84,7 @@
 }
 
 .uc-button-container {
-  margin-top: 1rem;
+  margin-top: $distance-lg;
 }
 
 .uc-seperator {

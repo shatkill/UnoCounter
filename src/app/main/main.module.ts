@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainFrameComponent } from './main-frame/main-frame.component';
-import { MainLandingComponent } from './main-landing/main-landing.component';
+import { MainLandingComponent } from 'src/app/main';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GamePageComponent } from './game-page/game-page.component';
-import { PlayerScoreItemComponent } from './player-score-item/player-score-item.component';
-import { StatisticsDialogComponent } from './game-page/statistics-dialog/statistics-dialog.component';
+import { GamePageComponent } from 'src/app/main';
+import { StatisticsDialogComponent } from 'src/app/main';
 
 import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    MainFrameComponent,
     MainLandingComponent,
     MainHeaderComponent,
     GamePageComponent,
-    PlayerScoreItemComponent,
     StatisticsDialogComponent,
   ],
   imports: [
@@ -29,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    SharedModule,
   ],
-  exports: [MainFrameComponent, MainLandingComponent, MainHeaderComponent],
+  exports: [MainLandingComponent, MainHeaderComponent],
 })
 export class MainModule {}

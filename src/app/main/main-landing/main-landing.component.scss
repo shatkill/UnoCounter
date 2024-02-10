@@ -1,40 +1,49 @@
-@import "../../../stylings.scss";
+@import "base-values";
 
-.uc-rules {
-  border: 2px solid $base-yellow;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 1rem;
+.uc-main-landing-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.uc-rules-form * {
+.uc-rules-form {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+
+  > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  input {
+    padding: $distance-md;
+    width: 3rem;
+    text-align: end;
+  }
 }
 
 .uc-add-player-form {
   input {
-    width: calc(100% - 10px);
-    margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: $distance-lg;
   }
 }
 
-.uc-players-table {
-  border: 2px solid $base-yellow;
+.uc-card {
+  border: 1px solid $base-yellow;
   border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 1rem;
+  padding: $distance-md;
+  margin-bottom: $distance-lg;
 }
 
 .uc-players {
-  :nth-child(n) {
+  :nth-child(4n + 1) {
     color: $base-red;
   }
-  :nth-child(2n) {
+  :nth-child(4n + 2) {
     color: $base-yellow;
   }
-  :nth-child(3n) {
+  :nth-child(4n + 3) {
     color: $base-green;
   }
   :nth-child(4n) {
@@ -43,15 +52,5 @@
 }
 
 .uc-player {
-  padding: 5px 0;
-}
-
-input {
-  height: 30px;
-  padding: 5px;
-}
-
-h4 {
-  text-decoration: underline;
-  padding-bottom: 5px;
+  padding: $distance-md 0;
 }

@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataSaveService } from 'src/app/shared/data-save.service';
-import { Score } from '../game-page/game-page.component';
+import { DataSaveService } from 'src/app/shared';
+import { Score } from 'src/app/main';
 
 @Component({
   selector: 'uc-main-landing',

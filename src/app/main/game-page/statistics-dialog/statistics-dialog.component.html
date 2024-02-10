@@ -1,19 +1,19 @@
 <div class="uc-dialog-container">
-  <h4>Statistics</h4>
-  <table>
-    <thead>
-      <tr class="uc-table-header-row">
-        <th></th>
-        <th *ngFor="let player of data.players">{{ player }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let statisticType of statisticTypes">
-        <td>{{ statisticType.id.name }}</td>
-        <td *ngFor="let player of data.players">
-          {{ statisticType.calcFunction(player) }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <h2>Statistics</h2>
+  <div class="uc-table-row">
+    <div class="uc-table-cell"></div>
+    <div *ngFor="let statisticType of statisticTypes" class="uc-table-row">
+      <div class="uc-table-cell">{{ statisticType.id.name }}</div>
+    </div>
+  </div>
+  <div class="uc-player-data">
+    <div *ngFor="let player of data.players" class="uc-table-row">
+      <div class="uc-table-cell uc-player">
+        {{ getPlayerRepresentation(player) }}
+      </div>
+      <div *ngFor="let statisticType of statisticTypes" class="uc-table-cell">
+        {{ statisticType.calcFunction(player) }}
+      </div>
+    </div>
+  </div>
 </div>

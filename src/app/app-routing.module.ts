@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainFrameComponent } from './main/main-frame/main-frame.component';
-import { MainLandingComponent } from './main/main-landing/main-landing.component';
-import { GamePageComponent } from './main/game-page/game-page.component';
+import { MainLandingComponent } from 'src/app/main';
+import { GamePageComponent } from 'src/app/main';
 
 const routes: Routes = [
-  {path: "", component: MainFrameComponent, children: [{
-    path: "",  component: MainLandingComponent
-  }, {
-    path: "game",  component: GamePageComponent
-  },]}
+  {
+    path: '',
+    component: MainLandingComponent,
+  },
+  {
+    path: 'game',
+    component: GamePageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

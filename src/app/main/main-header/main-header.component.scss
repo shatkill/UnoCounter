@@ -1,16 +1,15 @@
-.uc-main-header {
-    height: 4rem;
-    display: flex;
-    cursor: pointer;
-}
+@import "base-values";
 
-.uc-title {
-    line-height: 4rem;
+.uc-main-header {
+  height: $header-height;
+  display: flex;
+  cursor: pointer;
+  padding: $distance-md 0 $distance-lg 0;
+
+  .uc-title {
+    line-height: $header-height;
     font-size: x-large;
     font-weight: bold;
-    padding-left: 0.5rem;
-}
-
-.uc-main-header img {
-    padding: 0.5rem;
+    padding-left: $distance-lg;
+  }
 }

@@ -1,53 +1,55 @@
-<div class="uc-rules">
-  <h4>Rules</h4>
+<div class="uc-main-landing-container">
+  <div class="uc-card">
+    <h2 class="uc-underline">Rules</h2>
 
-  <form class="uc-rules-form">
-    <div>
-      <label>Halve points at full hundreds?</label>
-      <input type="checkbox" [formControl]="halveControl" />
+    <div class="uc-rules-form">
+      <div>
+        <label>Halve points at full hundreds?</label>
+        <input type="checkbox" [formControl]="halveControl" />
+      </div>
+      <div>
+        <label>Max Score</label>
+
+        <input
+          type="number"
+          [formControl]="scoreControl"
+          placeholder="Max. Score"
+        />
+      </div>
     </div>
-    <div>
-      <input
-        type="number"
-        [formControl]="scoreControl"
-        placeholder="Max. Score"
-      />
-      <label>Max Score</label>
+  </div>
+
+  <div class="uc-card">
+    <h2 class="uc-underline">Players: {{ selectedPlayers.length }}</h2>
+
+    @if (!selectedPlayers.length) {
+    <div class="uc-player">Add players below</div>
+    }
+    <div class="uc-players">
+      <div class="uc-player" *ngFor="let player of selectedPlayers">
+        {{ player }}
+      </div>
     </div>
+  </div>
+
+  <form class="uc-add-player-form uc-space-bottom">
+    <input
+      #addPlayerInput
+      type="text"
+      placeholder="Name"
+      [formControl]="addPlayerControl"
+    />
+    <div class="uc-default-button" (click)="addPlayer()">Add player</div>
   </form>
-</div>
 
-<div class="uc-players-table">
-  <h4>Players: {{ selectedPlayers.length }}</h4>
-
-  <div class="uc-player" *ngIf="selectedPlayers.length == 0">
-    Add players below
+  <div class="uc-accent-button uc-space-bottom" (click)="startGame()">
+    Start Game
   </div>
-
-  <div class="uc-players">
-    <div class="uc-player" *ngFor="let player of selectedPlayers">
-      {{ player }}
-    </div>
+  <div
+    *ngIf="recentGameExists"
+    class="uc-resume-game-form uc-accent-green-button uc-space-bottom"
+    (click)="resumeGame()"
+  >
+    Resume Game
   </div>
-</div>
-
-<form class="uc-add-player-form uc-space-bottom">
-  <input
-    #addPlayerInput
-    type="text"
-    placeholder="Name"
-    [formControl]="addPlayerControl"
-  />
-  <div class="uc-default-button" (click)="addPlayer()">Add player</div>
-</form>
-
-<div class="uc-accent-button uc-space-bottom" (click)="startGame()">
-  Start Game
-</div>
-<div
-  *ngIf="recentGameExists"
-  class="uc-resume-game-form uc-accent-green-button uc-space-bottom"
-  (click)="resumeGame()"
->
-  Resume Game
 </div>

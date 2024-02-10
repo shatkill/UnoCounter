@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Score } from '../game-page.component';
+import { Score } from 'src/app/main';
 
 export interface DialogData {
   players: string[];
@@ -38,6 +38,10 @@ export class StatisticsDialogComponent {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  protected getPlayerRepresentation(player: string) {
+    return player.slice(0, 1) + player.slice(-1);
   }
 
   public get statisticTypes() {

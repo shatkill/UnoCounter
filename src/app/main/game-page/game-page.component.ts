@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { DataSaveService } from 'src/app/shared/data-save.service';
-import { StatisticsDialogComponent } from './statistics-dialog/statistics-dialog.component';
+import { DataSaveService } from 'src/app/shared';
+import { StatisticsDialogComponent } from 'src/app/main';
 
 export interface Score {
   scoreCurrentRound: number;

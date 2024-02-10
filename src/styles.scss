@@ -1,90 +1,83 @@
-@import "./stylings.scss";
+@import "base-values";
 
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(215, 215, 215);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $color-text-light;
   font-size: 1.1rem;
-}
-
-.uc-default-button {
-  border-radius: 8px;
-  padding: 0.5rem;
-  background-color: $base-yellow;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-}
-
-.uc-accent-button {
-  border-radius: 8px;
-  padding: 0.5rem;
-  background-color: $base-red;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-}
-
-.uc-accent-green-button {
-  border-radius: 8px;
-  padding: 0.5rem;
-  background-color: $base-green;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-}
-
-.uc-info-button {
-  border-radius: 8px;
-  background-color: $base-green;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  mat-icon {
-    overflow: unset;
-  }
-}
-
-.uc-edit-button {
-  border-radius: 8px;
-  background-color: $base-yellow;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  mat-icon {
-    overflow: unset;
-  }
-}
-
-.uc-space-bottom {
-  margin-bottom: 1rem;
 }
 
 html,
 body {
-  height: 100vh;
-  max-width: 500px;
-  margin: 0 auto;
+  height: 100%;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: $main-background;
+}
+
+@mixin uc-button {
+  border-radius: 8px;
+  padding: $distance-md;
+  color: $color-text-dark;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uc-default-button {
+  @include uc-button;
+  background-color: $base-yellow;
+}
+
+.uc-accent-button {
+  @include uc-button;
+  background-color: $base-red;
+}
+
+.uc-accent-green-button {
+  @include uc-button;
+  background-color: $base-green;
+}
+
+@mixin uc-icon-button {
+  border-radius: 8px;
+  background-color: $base-green;
+  color: $color-text-dark;
+  text-align: center;
+  cursor: pointer;
+  width: $distance-lg;
+  height: $distance-lg;
+  padding: $distance-md;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-icon {
+    overflow: unset;
+  }
+}
+
+.uc-info-button {
+  @include uc-icon-button;
+  background-color: $base-green;
+}
+
+.uc-edit-button {
+  @include uc-icon-button;
+  background-color: $base-yellow;
+}
+
+.uc-back-button {
+  @include uc-icon-button;
+  background-color: $base-blue;
+}
+
+.uc-space-bottom {
+  margin-bottom: $distance-lg;
+}
+
+.uc-underline {
+  text-decoration: underline;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -104,14 +97,4 @@ input {
   border: none;
   border-bottom: 1px solid $base-yellow;
   background-color: $main-background;
-  font-weight: bold;
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: sans-serif;
 }

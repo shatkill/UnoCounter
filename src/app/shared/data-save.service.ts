@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Score } from '../main/game-page/game-page.component';
+import { Score } from 'src/app/main';
 
 @Injectable({
   providedIn: 'root',
